@@ -1,0 +1,432 @@
+/* font */
+@font-face {
+    font-family: 'BebasNeue';
+    src: url(../font/amaranth-bold-webfont.woff) format('woff');
+}
+
+body {
+    font: 18px/36px 'BebasNeue', 'Arial Narrow', arial, sans-serif;
+    overflow-x: hidden;
+}
+
+/* navbar section */
+nav {
+    display: flex;
+    background-color: white;
+    color: #3498db;
+    padding: 10px 0;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.judul-nav h1 {
+    margin-left: 20px;
+    font-family: 'Lobster', sans-serif;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #3498db;
+}
+
+nav ul li a:hover {
+    color: black; 
+}
+
+
+/* Home Section */
+.home {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    color: #000000;
+}
+
+.home img {
+    width: 290px;
+}
+
+.home h1 {
+    font-size: 35px;
+}
+
+.home p {
+    font-size: 20px;
+}
+
+.home .container {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInAndSlide 0.8s ease-in-out forwards;
+}
+
+@keyframes fadeInAndSlide {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* About section */
+.profile {
+    align-items: center;
+    height: 100vh;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto auto;
+  }
+
+.aboutme {
+    grid-column: 1 / 2;
+    grid-row: 1;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-bottom: 80px;
+}
+
+.profiletext {
+    grid-column: 1;
+    grid-row: 2;
+    margin-left: 60px;
+    text-align: justify;
+}
+
+.profilecici {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.profilecici img {
+    max-width: 60%;
+    height: auto; 
+    margin-left: 110px;
+}
+
+
+/* Skills Section */
+.skills .container {
+    min-height: 98vh;
+    padding: 30px 10%;
+}
+
+.container .judul-skills {
+    max-width: 700px;
+    margin: 0px auto;
+    text-align: center;
+}
+
+.container .judul-skills h2 {
+    position: relative;
+    font-size: 40px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.container .judul-skills h2::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    top: 125%;
+    left: 0;
+    background-color: #808080;
+}
+
+.container .judul-skills h2::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 3px;
+    background-color: #3498db;
+    top: calc(125% - 1px);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.skills .container .row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 70px;
+}
+
+.skills .container .row .col {
+    flex-basis: 45%;
+}
+
+.skills .row .col h3 {
+    position: relative;
+    color: black;
+    font-size: 26px;
+    display: inline-block;
+    margin-bottom: 30px;
+}
+
+.skills .row .col h3::before {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 1px;
+    top: 125%;
+    left: 0;
+    background-color: #808080;
+}
+
+.skills .row .col h3::after {
+    content: '';
+    position: absolute;
+    width: 25%;
+    height: 3px;
+    top: calc(125% - 1px);
+    left: 0;
+    background-color: #3498db;
+}
+
+.skill .subject {
+    font-size: 18px;
+    font-weight: thin;
+    color: #808080;
+    padding-bottom: 15px;
+}
+
+.progress-bar {
+    position: relative;
+    width: 100%;
+    height: 5px;
+    background-color: #808080;
+    border-radius: 15px;
+    border-bottom: 20px;
+}
+
+.progress-bar::after {
+    position: absolute;
+    content: attr(value);
+    top: -35px;
+    right: 0;
+    color: #808080;
+    font-size: 18px;
+}
+
+.progress-line {
+    position: absolute;
+    width: 0%;
+    height: 7px;
+    background-color: #3498db;
+    border-radius: 15px;
+    top: -1px;
+    animation: animate 1.5s cubic-bezier(1, 0.2, 0.2, 1) forwards;
+}
+.progress-line::after {
+    content: '';
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    top: 50%;
+    left: 100%;
+    transform: translate(-50%, -50%);
+    background-color: #3498db;
+}
+
+@keyframes animate {
+    100% {
+        width: 100%;
+    }
+}
+
+
+/* section projects */
+.projects {
+    padding: 80px 0;
+}
+
+.judulprojects {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 60px;
+    margin-top: -30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.projects .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        gap: 10px;
+        padding-left: 40px;
+        padding-right: 40px;
+}
+
+.card {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.isicard {
+    height: 290px;
+    padding: 20px;
+    position: relative;
+    flex-grow: 1;
+}
+
+.projects img {
+    width: 400px;
+}
+
+.projects .isicard h4 {
+    font-size: 25px;
+    font-weight: 500;
+    margin: 5px;
+}
+
+.projects .isicard p {
+    text-align: justify;
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #808080;
+}
+
+.projects .card .buttonprojects{
+    background-color: #007BFF;
+    border-color: #007BFF;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+    left: 13%;
+    position: relative;
+    bottom: 20px;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #ffffff;
+    margin-bottom: 20px;
+
+}
+
+.projects .card .buttonprojects:hover {
+    background-color: #0056b3;
+} 
+
+/* Contact Section */
+
+
+/* Footer Section */
+.footer {
+    /* background-color:#3498db; */
+    padding: 10px 0;
+    text-align: center;
+}
+
+.footer .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.sebelahkiri {
+    flex: 1;
+}
+
+.sebelahkanan {
+    display: flex;
+    margin-left: 20px;
+    flex-direction: column;
+}
+
+.socialmedia {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.logososialmedia {
+    display: inline-block;
+    margin-right: 200px;
+    margin-left: -150px;
+}
+
+.logososialmedia img {
+    width: 20px;
+    height: 20px;
+}
+
+@media (max-width: 768px) {
+
+    /* Navbar Section */
+    
+    /* Skills Section */
+
+    .skills .container {
+        padding: 30px 8%;
+
+    }
+
+}
+
+
+
+/* ukuran mobile */
+@media(max-width: 568px) {
+
+    /* skills section */
+    .skills .container .row {
+        flex-direction: column;
+    }
+
+    .container .judul-skills h2 {
+        font-size: 36px;
+    }
+
+    .skills .container .row {
+        margin-top: 30px;
+    }
+
+    .skills .container .row .col:nth-child(2) {
+        margin-top: 20px;
+    }
+
+    /* projects section */
+    
+}
