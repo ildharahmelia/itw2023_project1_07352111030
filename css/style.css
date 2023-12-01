@@ -348,7 +348,70 @@ nav ul li a:hover {
 } 
 
 /* Contact Section */
+.contact {
+    height: 100vh;
+    width: auto;
+}
 
+.contact h2 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    margin-top: 50px;
+    padding-top: 50px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    color: #000000;
+}
+
+.tempatkontak {
+    border-radius: 5px;
+    padding: 20px;
+    text-align: left;
+    margin-top: 20px;
+    width: 500px;
+    margin: 0 auto;
+}
+
+.form {
+    margin: 10px 0;
+}
+
+.form label {
+    display: block;
+    color: #000000;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin: 5px;
+}
+
+.form input,
+.form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form textarea {
+    height: 100px;
+}
+
+.buttoncontact {
+    justify-content: center;
+    align-items: center;
+    margin-left: 210px;
+}
+
+.submit {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007BFF;
+    transition: background-color 0.3s;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
 
 /* Footer Section */
 .footer {
@@ -393,23 +456,84 @@ nav ul li a:hover {
 }
 
 @media (max-width: 768px) {
-
     /* Navbar Section */
-    
-    /* Skills Section */
-
-    .skills .container {
-        padding: 30px 8%;
-
+    nav {
+        padding: 10px;
     }
 
+    .judulnav h1 {
+        margin-left: 10px;
+    }
+    
+    .menu {
+        margin-right: 10px;
+    }
+
+    /* Home Section */
+    .home {
+        height: 70vh;
+    }
+    
+    /* profile */
+    .profile {
+        height: auto;
+        padding: 20px;
+    }
+    
+    .aboutme {
+        text-shadow: none;
+        color: #000000;
+    }
+
+    /* Skills Section */
+    .skills .container {
+        padding: 30px 8%;
+    
+    }
+
+    /* Projects Section */
+    .projects {
+    height: auto;
+    padding: 20px;
+    }
+
+    .judulprojects {
+        text-shadow: none;
+        color: #000000;
+        margin-bottom: 20px;
+    }
+
+    /* Contact Section */
+    .contact {
+        height: auto;
+        padding: 20px;
+    }
+    
+    .contact h2 {
+        text-shadow: none;
+        color: black;
+    }
+    
+    .form {
+        margin-bottom: 1rem;
+    }
+
+    /* Footer Section */
+    .footer {
+        padding: 10px 0;
+    }
+    
+    .socialmedia {
+        justify-content: center;
+    }
+    
+    .socialmedia li {
+        margin-right: 10px;
+    }
 }
-
-
 
 /* ukuran mobile */
 @media(max-width: 568px) {
-
     /* skills section */
     .skills .container .row {
         flex-direction: column;
@@ -427,6 +551,35 @@ nav ul li a:hover {
         margin-top: 20px;
     }
 
-    /* projects section */
+    /* contact section */
+    .contact h2 {
+        width: 100%;
+        color: black;
+        }
+
+    .tempatkontak {
+        width: auto;
+      }
+    
+      .form label {
+        width: 100%;
+      }
+    
+      .form input,
+      .form textarea {
+        margin-bottom: 1rem;
+      }
+    
+      .buttoncontact {
+        margin-left: 150px;
+      }
+
+      /* .submit {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      } */
     
 }
