@@ -12,14 +12,13 @@ body {
 /* navbar section */
 nav {
     display: flex;
-    background-color: white;
     color: #3498db;
     padding: 10px 0;
     justify-content: space-between;
     align-items: center;
 }
 
-.judul-nav h1 {
+nav .logo {
     margin-left: 20px;
     font-family: 'Lobster', sans-serif;
     letter-spacing: 3px;
@@ -36,13 +35,71 @@ nav ul li {
     margin-right: 20px;
 }
 
-nav a {
+nav ul li a{
     text-decoration: none;
     color: #3498db;
 }
 
 nav ul li a:hover {
-    color: black; 
+    color: black;
+    transition: 0.2s;
+}
+
+/* hamburger menu */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.menu-toggle input {
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    left: -5px;
+    top: -3px;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: black;
+    border-radius: 3px;
+    transition: all 0.5s;
+    /* margin-right: 15px; */
+}
+
+/* hamburger menu animation */
+
+.menu-toggle span:nth-child(2) {
+    /* background-color: black; */
+    transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(4) {
+    /* background-color: black; */
+    transform-origin: 0 100%;
+}
+
+.menu-toggle input:checked ~ span:nth-child(2) {
+    background-color: black;
+    transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.menu-toggle input:checked ~ span:nth-child(4) {
+    background-color: black;
+    transform: rotate(-45deg) translate(-1px, 0);
+}
+
+.menu-toggle input:checked ~ span:nth-child(3) {
+    opacity: 0;
+    transform: scale(0)
 }
 
 
@@ -57,6 +114,7 @@ nav ul li a:hover {
     background-position: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     color: #000000;
+    background-image: url(../img/back1.jpg);
 }
 
 .home img {
@@ -80,7 +138,7 @@ nav ul li a:hover {
 @keyframes fadeInAndSlide {
     from {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(30px);
     }
     to {
         opacity: 1;
@@ -111,7 +169,8 @@ nav ul li a:hover {
     font-size: 40px;
     font-weight: 700;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    margin-bottom: 80px;
+    margin-bottom: 50px;
+    animation: slide-up 0.7s ease;
 }
 
 .profiletext {
@@ -130,9 +189,20 @@ nav ul li a:hover {
     max-width: 60%;
     height: auto; 
     margin-left: 110px;
+    border: 3px solid black;
 }
 
+@keyframes slide-up {
+    from {
+      transform: translateY(-20px);
+    }
+  
+    to {
+      transform: translateY(0);
+    }
+}
 
+  
 /* Skills Section */
 .skills .container {
     min-height: 98vh;
@@ -332,14 +402,14 @@ nav ul li a:hover {
     font-size: 16px;
     font-weight: 600;
     transition: background-color 0.3s;
-    left: 13%;
+    left: 15%;
     position: relative;
     bottom: 20px;
     transform: translateX(-50%);
-    padding: 10px 20px;
+    padding: 10px 10px;
     border-radius: 5px;
     color: #ffffff;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 
 }
 
@@ -351,6 +421,8 @@ nav ul li a:hover {
 .contact {
     height: 100vh;
     width: auto;
+    background-image: url(../img/back.jpg);
+    background-size: cover;
 }
 
 .contact h2 {
@@ -415,7 +487,6 @@ nav ul li a:hover {
 
 /* Footer Section */
 .footer {
-    /* background-color:#3498db; */
     padding: 10px 0;
     text-align: center;
 }
@@ -455,18 +526,12 @@ nav ul li a:hover {
     height: 20px;
 }
 
-@media (max-width: 768px) {
-    /* Navbar Section */
-    nav {
-        padding: 10px;
-    }
+/* ukuran tablet */
+@media screen and (max-width: 768px) {
 
-    .judulnav h1 {
-        margin-left: 10px;
-    }
-    
-    .menu {
-        margin-right: 10px;
+    /* Navbar Section */
+    nav ul {
+        width: 50%;
     }
 
     /* Home Section */
@@ -483,6 +548,10 @@ nav ul li a:hover {
     .aboutme {
         text-shadow: none;
         color: #000000;
+    }
+
+    .profiletext {
+        font-size: 16px;
     }
 
     /* Skills Section */
@@ -533,7 +602,72 @@ nav ul li a:hover {
 }
 
 /* ukuran mobile */
-@media(max-width: 568px) {
+@media screen and (max-width: 568px) {
+
+    /* navbar section */
+    nav ul {
+        position: static;
+        margin-right: 0;
+    }
+    .menu-toggle {
+        display: flex;
+        z-index: 10;
+    }
+    nav ul {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 80px;
+        height: 40vh;
+        margin-top: 50px;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        z-index: 9;
+        transform: translateX(100%);
+        transition: all 1s;
+        opacity: 0;
+    }
+
+    nav ul.slide {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    /* home section */
+    .home img {
+        width: 250px;
+    }
+
+    .home h1 {
+        font-size: 28px;
+    }
+
+    .home p {
+    font-size: 17px;
+    }
+
+    /* profile */
+    .grid {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .aboutme h2 {
+        margin-top: 30px;
+        margin-bottom: -30px;
+    }
+
+    .profiletext {
+        margin-right: 20px;
+        margin-left: 20px;
+        /* color: #808080; */
+    }
+
+    .profilecici img {
+        margin-top: 20px;
+    }
+
     /* skills section */
     .skills .container .row {
         flex-direction: column;
@@ -549,7 +683,28 @@ nav ul li a:hover {
 
     .skills .container .row .col:nth-child(2) {
         margin-top: 20px;
+        margin-bottom: 10px;
     }
+
+    /* projects section */
+    .projects .container {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .judulprojects {
+        margin-top: 10px;
+      }
+
+      .projects .card {
+        width: 100%;
+        margin-right: 70px;
+      }
+
+        .card {
+        margin-bottom: 10px;
+      }
 
     /* contact section */
     .contact h2 {
@@ -571,15 +726,26 @@ nav ul li a:hover {
       }
     
       .buttoncontact {
-        margin-left: 150px;
+        margin-left: 160px;
       }
 
-      /* .submit {
-        width: 100%;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-      } */
+      /* footer section */
+      .footer .container {
+        flex-direction: column;
+      }
+    
+      .logososialmedia {
+        margin-top: 5px;
+        margin-right: 0;
+        margin-left: 0;
+        padding: 10px;
+        display:inline-block;
+        text-align: center;
+      }
+    
+      .logososialmedia img {
+        width: 30px;
+        height: 30px;
+      }
     
 }
