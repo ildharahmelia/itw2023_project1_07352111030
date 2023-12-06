@@ -421,8 +421,6 @@ nav ul li a:hover {
 .contact {
     height: 100vh;
     width: auto;
-    background-image: url(../img/back.jpg);
-    background-size: cover;
 }
 
 .contact h2 {
