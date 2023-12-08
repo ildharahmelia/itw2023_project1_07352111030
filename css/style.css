@@ -1,5 +1,6 @@
 /* font */
 @font-face {
+    /* https://www.fontsquirrel.com/ */
     font-family: 'BebasNeue';
     src: url(../font/amaranth-bold-webfont.woff) format('woff');
 }
