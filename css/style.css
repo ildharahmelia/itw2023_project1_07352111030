@@ -79,12 +79,10 @@ nav ul li a:hover {
 /* hamburger menu animation */
 
 .menu-toggle span:nth-child(2) {
-    /* background-color: black; */
     transform-origin: 0 0;
 }
 
 .menu-toggle span:nth-child(4) {
-    /* background-color: black; */
     transform-origin: 0 100%;
 }
 
@@ -112,9 +110,7 @@ nav ul li a:hover {
     align-items: center;
     height: 100vh;
     background-size: cover;
-    background-position: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    color: #000000;
     background-image: url(../img/back1.jpg);
 }
 
@@ -136,6 +132,7 @@ nav ul li a:hover {
     animation: fadeInAndSlide 0.8s ease-in-out forwards;
 }
 
+/* animasi Home */
 @keyframes fadeInAndSlide {
     from {
         opacity: 0;
@@ -171,7 +168,6 @@ nav ul li a:hover {
     font-weight: 700;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     margin-bottom: 50px;
-    animation: slide-up 0.7s ease;
 }
 
 .profiletext {
@@ -193,16 +189,6 @@ nav ul li a:hover {
     border: 3px solid black;
 }
 
-@keyframes slide-up {
-    from {
-      transform: translateY(-20px);
-    }
-  
-    to {
-      transform: translateY(0);
-    }
-}
-
   
 /* Skills Section */
 .skills .container {
@@ -214,6 +200,7 @@ nav ul li a:hover {
     max-width: 700px;
     margin: 0px auto;
     text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .container .judul-skills h2 {
@@ -330,6 +317,7 @@ nav ul li a:hover {
     background-color: #3498db;
 }
 
+/* animasi skill pada progress-line */
 @keyframes animate {
     100% {
         width: 100%;
@@ -372,6 +360,14 @@ nav ul li a:hover {
     transform: translateY(-5px);
 }
 
+.projects .card .sumber {
+    font-size: 10px;
+    margin-top: -20px;
+    text-align: start;
+    margin-left: 10px;
+    /* color: #808080; */
+}
+
 .isicard {
     height: 290px;
     padding: 20px;
@@ -380,7 +376,7 @@ nav ul li a:hover {
 }
 
 .projects img {
-    width: 400px;
+    width: 405px;
 }
 
 .projects .isicard h4 {
@@ -417,6 +413,7 @@ nav ul li a:hover {
 .projects .card .buttonprojects:hover {
     background-color: #0056b3;
 } 
+
 
 /* Contact Section */
 .contact {
@@ -537,16 +534,36 @@ nav ul li a:hover {
     .home {
         height: 70vh;
     }
-    
+
     /* profile */
     .profile {
         height: auto;
         padding: 20px;
     }
-    
+
+    .grid {
+        display: flex;
+        flex-direction: column;
+    }
+
     .aboutme {
-        text-shadow: none;
-        color: #000000;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .aboutme h2 {
+        margin-top: 30px;
+        margin-bottom: -30px;
+    }
+
+    .profiletext {
+        margin-right: 20px;
+        margin-left: 20px;
+        /* color: #808080; */
+    }
+
+    .profilecici img {
+        margin-top: 20px;
+        margin-left: 20%;
     }
 
     .profiletext {
@@ -559,16 +576,41 @@ nav ul li a:hover {
     
     }
 
+    .container .judul-skills {
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
     /* Projects Section */
     .projects {
-    height: auto;
-    padding: 20px;
+        height: auto;
+        padding: 20px;
+    }
+
+    .projects .container {
+        width: 90%;
+        flex-direction: column;
+        align-items: center;
     }
 
     .judulprojects {
-        text-shadow: none;
-        color: #000000;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .projects .card {
+        width: 90%;
+        margin-right: 20px;
+    }
+
+    .card {
         margin-bottom: 20px;
+    }
+
+    .projects img {
+        width: 550px;
+    }
+
+    .projects .card .buttonprojects{
+        margin-right: 40px;
     }
 
     /* Contact Section */
@@ -578,12 +620,7 @@ nav ul li a:hover {
     }
     
     .contact h2 {
-        text-shadow: none;
-        color: black;
-    }
-    
-    .form {
-        margin-bottom: 1rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
 
     /* Footer Section */
@@ -595,8 +632,15 @@ nav ul li a:hover {
         justify-content: center;
     }
     
-    .socialmedia li {
-        margin-right: 10px;
+    .logososialmedia {
+        margin-right: 0;
+        margin-left: 0;
+        padding: 10px;
+    }
+    
+    .logososialmedia img {
+        width: 30px;
+        height: 30px;
     }
 }
 
@@ -660,7 +704,6 @@ nav ul li a:hover {
     .profiletext {
         margin-right: 20px;
         margin-left: 20px;
-        /* color: #808080; */
     }
 
     .profilecici img {
@@ -692,18 +735,33 @@ nav ul li a:hover {
         align-items: center;
       }
 
-      .judulprojects {
+    .judulprojects {
         margin-top: 10px;
-      }
+    }
 
-      .projects .card {
+    .projects .card {
         width: 100%;
         margin-right: 70px;
-      }
 
-        .card {
+        /* ekstensi mobile = margin-right: 80px; */
+    }
+
+    .card {
         margin-bottom: 10px;
-      }
+    }
+
+    .projects img {
+        width: 440px;
+
+        /* ekstensi mobile = width: 350px; */
+    }
+
+    .projects .card .buttonprojects{
+        margin-right: 10px;
+
+        /* ekstensi mobile = margin-right: -10px;
+        margin-top: 50px; */
+    }
 
     /* contact section */
     .contact h2 {
@@ -726,6 +784,9 @@ nav ul li a:hover {
     
       .buttoncontact {
         margin-left: 160px;
+
+
+        /* ekstensi mobile = margin-left: 120px; */
       }
 
       /* footer section */
