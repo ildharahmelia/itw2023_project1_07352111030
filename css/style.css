@@ -7,7 +7,7 @@
 
 body {
     font: 18px/36px 'BebasNeue', 'Arial Narrow', arial, sans-serif;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
 }
 
 /* navbar section */
@@ -742,8 +742,6 @@ nav ul li a:hover {
     .projects .card {
         width: 100%;
         margin-right: 70px;
-
-        /* ekstensi mobile = margin-right: 80px; */
     }
 
     .card {
@@ -752,15 +750,10 @@ nav ul li a:hover {
 
     .projects img {
         width: 440px;
-
-        /* ekstensi mobile = width: 350px; */
     }
 
     .projects .card .buttonprojects{
         margin-right: 10px;
-
-        /* ekstensi mobile = margin-right: -10px;
-        margin-top: 50px; */
     }
 
     /* contact section */
@@ -784,11 +777,345 @@ nav ul li a:hover {
     
       .buttoncontact {
         margin-left: 160px;
-
-
-        /* ekstensi mobile = margin-left: 120px; */
       }
 
+      /* footer section */
+      .footer .container {
+        flex-direction: column;
+      }
+    
+      .logososialmedia {
+        margin-top: 5px;
+        margin-right: 0;
+        margin-left: 0;
+        padding: 10px;
+        display:inline-block;
+        text-align: center;
+      }
+    
+      .logososialmedia img {
+        width: 30px;
+        height: 30px;
+      }
+    
+}
+/* ukuran mobile */
+@media screen and (max-width: 568px) {
+
+    /* navbar section */
+    nav ul {
+        position: static;
+        margin-right: 0;
+    }
+    .menu-toggle {
+        display: flex;
+        z-index: 10;
+    }
+    nav ul {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 80px;
+        height: 40vh;
+        margin-top: 50px;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        z-index: 9;
+        transform: translateX(100%);
+        transition: all 1s;
+        opacity: 0;
+    }
+
+    nav ul.slide {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    /* home section */
+    .home img {
+        width: 250px;
+    }
+
+    .home h1 {
+        font-size: 28px;
+    }
+
+    .home p {
+    font-size: 17px;
+    }
+
+    /* profile */
+    .grid {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .aboutme h2 {
+        margin-top: 30px;
+        margin-bottom: -30px;
+    }
+
+    .profiletext {
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+
+    .profilecici img {
+        margin-top: 20px;
+    }
+
+    /* skills section */
+    .skills .container .row {
+        flex-direction: column;
+    }
+
+    .container .judul-skills h2 {
+        font-size: 36px;
+    }
+
+    .skills .container .row {
+        margin-top: 30px;
+    }
+
+    .skills .container .row .col:nth-child(2) {
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    /* projects section */
+    .projects .container {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+      }
+
+    .judulprojects {
+        margin-top: 10px;
+    }
+
+    .projects .card {
+        width: 100%;
+        margin-right: 80px;
+    }
+
+    .card {
+        margin-bottom: 10px;
+    }
+
+    .projects img {
+        width: 440px;
+        max-width: 100%;
+         height: auto;
+    }
+
+    .projects .card .buttonprojects{
+        margin-right: 10px;
+
+        margin-right: -10px;
+        margin-top: 50px;
+    }
+
+    /* contact section */
+    .contact h2 {
+        width: 100%;
+        color: black;
+        }
+
+    .tempatkontak {
+        width: auto;
+      }
+    
+      .form label {
+        width: 100%;
+      }
+    
+      .form input,
+      .form textarea {
+        margin-bottom: 1rem;
+      }
+    
+      .buttoncontact {
+        margin-left: 160px;
+        max-width: 100%;
+      
+      /* footer section */
+      .footer .container {
+        flex-direction: column;
+      }
+    
+      .logososialmedia {
+        margin-top: 5px;
+        margin-right: 0;
+        margin-left: 0;
+        padding: 10px;
+        display:inline-block;
+        text-align: center;
+      }
+    
+      .logososialmedia img {
+        width: 30px;
+        height: 30px;
+      }
+    
+}
+@media screen and (max-width: 470px) {
+   
+    body{
+        overflow-x: hidden;
+        width: 100%;
+    }
+    /* navbar section */
+    nav ul {
+        position: static;
+        margin-right: 0;
+    }
+    .menu-toggle {
+        display: flex;
+        z-index: 10;
+    }
+    nav ul {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 80px;
+        height: 40vh;
+        margin-top: 50px;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        z-index: 9;
+        transform: translateX(100%);
+        transition: all 1s;
+        opacity: 0;
+    }
+
+    nav ul.slide {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    /* home section */
+    .home img {
+        width: 250px;
+    }
+
+    .home h1 {
+        font-size: 28px;
+    }
+
+    .home p {
+    font-size: 17px;
+    }
+
+    /* profile */
+    .grid {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .aboutme h2 {
+        margin-top: 30px;
+        margin-bottom: -30px;
+    }
+
+    .profiletext {
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+
+    .profilecici img {
+        margin-top: 20px;
+    }
+
+    /* skills section */
+    .skills .container .row {
+        flex-direction: column;
+    }
+
+    .container .judul-skills h2 {
+        font-size: 36px;
+    }
+
+    .skills .container .row {
+        margin-top: 30px;
+    }
+
+    .skills .container .row .col:nth-child(2) {
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    /* projects section */
+    .projects .container {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+      }
+
+    .judulprojects {
+        margin-top: 10px;
+    }
+
+    .projects .card {
+        width: 100%;
+        /* margin-right: 70px; */
+
+        margin-right: 80px;
+    }
+
+    .card {
+        margin-bottom: 10px;
+    }
+
+    .projects img {
+        /* width: 440px; */
+        max-width: 100%;
+         height: auto;
+        width: 350px;
+    }
+
+    .projects .card .buttonprojects{
+        margin-right: 10px;
+
+        margin-right: -10px;
+        margin-top: 50px;
+    }
+
+    /* contact section */
+    .contact h2 {
+        width: 100%;
+        color: black;
+        }
+
+    .tempatkontak {
+        width: auto;
+      }
+    
+      .form label {
+        width: 100%;
+      }
+    
+      .form input,
+      .form textarea {
+        margin-bottom: 1rem;
+      }
+    
+      .buttoncontact {
+        /* margin-left: 160px; */
+        /* margin: auto; */
+        max-width: 100%;
+
+        margin-left: 115px;
+
+      }
+      /* .buttoncontact {
+        margin-left: 160px;
+
+        margin-left: 115px;
+
+      } */
+      
       /* footer section */
       .footer .container {
         flex-direction: column;
