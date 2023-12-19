@@ -149,7 +149,6 @@ nav ul li a:hover {
 .profile {
     align-items: center;
     height: 100vh;
-    background-size: cover;
     display: grid;
     grid-template-columns: 1fr;
 }
@@ -365,7 +364,6 @@ nav ul li a:hover {
     margin-top: -20px;
     text-align: start;
     margin-left: 10px;
-    /* color: #808080; */
 }
 
 .isicard {
@@ -398,7 +396,7 @@ nav ul li a:hover {
     border-color: #007BFF;
     font-size: 16px;
     font-weight: 600;
-    transition: background-color 0.3s;
+    transition: 0.3s;
     left: 15%;
     position: relative;
     bottom: 20px;
@@ -558,12 +556,13 @@ nav ul li a:hover {
     .profiletext {
         margin-right: 20px;
         margin-left: 20px;
-        /* color: #808080; */
     }
 
     .profilecici img {
         margin-top: 20px;
-        margin-left: 20%;
+        margin-left: 25%;
+
+        max-width: 50%;
     }
 
     .profiletext {
@@ -573,7 +572,6 @@ nav ul li a:hover {
     /* Skills Section */
     .skills .container {
         padding: 30px 8%;
-    
     }
 
     .container .judul-skills {
@@ -598,6 +596,7 @@ nav ul li a:hover {
 
     .projects .card {
         width: 90%;
+        height: auto;
         margin-right: 20px;
     }
 
@@ -606,7 +605,7 @@ nav ul li a:hover {
     }
 
     .projects img {
-        width: 550px;
+        width: 540px;
     }
 
     .projects .card .buttonprojects{
@@ -620,6 +619,7 @@ nav ul li a:hover {
     }
     
     .contact h2 {
+        font-size: 35px;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
 
@@ -644,327 +644,14 @@ nav ul li a:hover {
     }
 }
 
-/* ukuran mobile */
+/* ukuran layar paling kecil */
 @media screen and (max-width: 568px) {
 
-    /* navbar section */
-    nav ul {
-        position: static;
-        margin-right: 0;
-    }
-    .menu-toggle {
-        display: flex;
-        z-index: 10;
-    }
-    nav ul {
-        position: absolute;
-        right: 0;
-        top: 0;
-        width: 80px;
-        height: 40vh;
-        margin-top: 50px;
-        justify-content: space-evenly;
-        flex-direction: column;
-        align-items: center;
-        z-index: 9;
-        transform: translateX(100%);
-        transition: all 1s;
-        opacity: 0;
-    }
-
-    nav ul.slide {
-        opacity: 1;
-        transform: translateX(0);
-    }
-
-    /* home section */
-    .home img {
-        width: 250px;
-    }
-
-    .home h1 {
-        font-size: 28px;
-    }
-
-    .home p {
-    font-size: 17px;
-    }
-
-    /* profile */
-    .grid {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .aboutme h2 {
-        margin-top: 30px;
-        margin-bottom: -30px;
-    }
-
-    .profiletext {
-        margin-right: 20px;
-        margin-left: 20px;
-    }
-
-    .profilecici img {
-        margin-top: 20px;
-    }
-
-    /* skills section */
-    .skills .container .row {
-        flex-direction: column;
-    }
-
-    .container .judul-skills h2 {
-        font-size: 36px;
-    }
-
-    .skills .container .row {
-        margin-top: 30px;
-    }
-
-    .skills .container .row .col:nth-child(2) {
-        margin-top: 20px;
-        margin-bottom: 10px;
-    }
-
-    /* projects section */
-    .projects .container {
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
-      }
-
-    .judulprojects {
-        margin-top: 10px;
-    }
-
-    .projects .card {
-        width: 100%;
-        margin-right: 70px;
-    }
-
-    .card {
-        margin-bottom: 10px;
-    }
-
-    .projects img {
-        width: 440px;
-    }
-
-    .projects .card .buttonprojects{
-        margin-right: 10px;
-    }
-
-    /* contact section */
-    .contact h2 {
-        width: 100%;
-        color: black;
-        }
-
-    .tempatkontak {
-        width: auto;
-      }
-    
-      .form label {
-        width: 100%;
-      }
-    
-      .form input,
-      .form textarea {
-        margin-bottom: 1rem;
-      }
-    
-      .buttoncontact {
-        margin-left: 160px;
-      }
-
-      /* footer section */
-      .footer .container {
-        flex-direction: column;
-      }
-    
-      .logososialmedia {
-        margin-top: 5px;
-        margin-right: 0;
-        margin-left: 0;
-        padding: 10px;
-        display:inline-block;
-        text-align: center;
-      }
-    
-      .logososialmedia img {
-        width: 30px;
-        height: 30px;
-      }
-    
-}
-/* ukuran mobile */
-@media screen and (max-width: 568px) {
-
-    /* navbar section */
-    nav ul {
-        position: static;
-        margin-right: 0;
-    }
-    .menu-toggle {
-        display: flex;
-        z-index: 10;
-    }
-    nav ul {
-        position: absolute;
-        right: 0;
-        top: 0;
-        width: 80px;
-        height: 40vh;
-        margin-top: 50px;
-        justify-content: space-evenly;
-        flex-direction: column;
-        align-items: center;
-        z-index: 9;
-        transform: translateX(100%);
-        transition: all 1s;
-        opacity: 0;
-    }
-
-    nav ul.slide {
-        opacity: 1;
-        transform: translateX(0);
-    }
-
-    /* home section */
-    .home img {
-        width: 250px;
-    }
-
-    .home h1 {
-        font-size: 28px;
-    }
-
-    .home p {
-    font-size: 17px;
-    }
-
-    /* profile */
-    .grid {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .aboutme h2 {
-        margin-top: 30px;
-        margin-bottom: -30px;
-    }
-
-    .profiletext {
-        margin-right: 20px;
-        margin-left: 20px;
-    }
-
-    .profilecici img {
-        margin-top: 20px;
-    }
-
-    /* skills section */
-    .skills .container .row {
-        flex-direction: column;
-    }
-
-    .container .judul-skills h2 {
-        font-size: 36px;
-    }
-
-    .skills .container .row {
-        margin-top: 30px;
-    }
-
-    .skills .container .row .col:nth-child(2) {
-        margin-top: 20px;
-        margin-bottom: 10px;
-    }
-
-    /* projects section */
-    .projects .container {
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
-      }
-
-    .judulprojects {
-        margin-top: 10px;
-    }
-
-    .projects .card {
-        width: 100%;
-        margin-right: 80px;
-    }
-
-    .card {
-        margin-bottom: 10px;
-    }
-
-    .projects img {
-        width: 440px;
-        max-width: 100%;
-         height: auto;
-    }
-
-    .projects .card .buttonprojects{
-        margin-right: 10px;
-
-        margin-right: -10px;
-        margin-top: 50px;
-    }
-
-    /* contact section */
-    .contact h2 {
-        width: 100%;
-        color: black;
-        }
-
-    .tempatkontak {
-        width: auto;
-      }
-    
-      .form label {
-        width: 100%;
-      }
-    
-      .form input,
-      .form textarea {
-        margin-bottom: 1rem;
-      }
-    
-      .buttoncontact {
-        margin-left: 160px;
-        max-width: 100%;
-      
-      /* footer section */
-      .footer .container {
-        flex-direction: column;
-      }
-    
-      .logososialmedia {
-        margin-top: 5px;
-        margin-right: 0;
-        margin-left: 0;
-        padding: 10px;
-        display:inline-block;
-        text-align: center;
-      }
-    
-      .logososialmedia img {
-        width: 30px;
-        height: 30px;
-      }
-    
-}
-@media screen and (max-width: 470px) {
-   
-    body{
+    body {
         overflow-x: hidden;
         width: 100%;
     }
+
     /* navbar section */
     nav ul {
         position: static;
@@ -1005,7 +692,7 @@ nav ul li a:hover {
     }
 
     .home p {
-    font-size: 17px;
+        font-size: 17px;
     }
 
     /* profile */
@@ -1015,13 +702,9 @@ nav ul li a:hover {
     }
 
     .aboutme h2 {
+        font-size: 35px;
         margin-top: 30px;
         margin-bottom: -30px;
-    }
-
-    .profiletext {
-        margin-right: 20px;
-        margin-left: 20px;
     }
 
     .profilecici img {
@@ -1034,7 +717,7 @@ nav ul li a:hover {
     }
 
     .container .judul-skills h2 {
-        font-size: 36px;
+        font-size: 35px;
     }
 
     .skills .container .row {
@@ -1048,20 +731,19 @@ nav ul li a:hover {
 
     /* projects section */
     .projects .container {
-        width: 100%;
+        width: 95%;
         flex-direction: column;
         align-items: center;
       }
 
     .judulprojects {
         margin-top: 10px;
+        font-size: 35px;
     }
 
     .projects .card {
-        width: 100%;
-        /* margin-right: 70px; */
-
-        margin-right: 80px;
+        width: 95%;
+        margin-right: 60px;
     }
 
     .card {
@@ -1069,17 +751,21 @@ nav ul li a:hover {
     }
 
     .projects img {
-        /* width: 440px; */
-        max-width: 100%;
-         height: auto;
-        width: 350px;
+        width: 400px;
+    }
+
+    .projects .isicard h4 {
+        font-size: 22px;
+        margin-top: -20px;
+    }
+
+    .projects .isicard p {
+        font-size: 16px;
+        line-height: 1.9;
     }
 
     .projects .card .buttonprojects{
         margin-right: 10px;
-
-        margin-right: -10px;
-        margin-top: 50px;
     }
 
     /* contact section */
@@ -1102,20 +788,9 @@ nav ul li a:hover {
       }
     
       .buttoncontact {
-        /* margin-left: 160px; */
-        /* margin: auto; */
-        max-width: 100%;
-
-        margin-left: 115px;
-
-      }
-      /* .buttoncontact {
         margin-left: 160px;
+      }
 
-        margin-left: 115px;
-
-      } */
-      
       /* footer section */
       .footer .container {
         flex-direction: column;
@@ -1135,4 +810,175 @@ nav ul li a:hover {
         height: 30px;
       }
     
+}
+
+/* ukuran mobile */
+@media screen and (max-width: 470px) {
+   
+    body {
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    /* navbar section */
+    nav ul {
+        position: static;
+        margin-right: 0;
+    }
+    .menu-toggle {
+        display: flex;
+        z-index: 10;
+    }
+    nav ul {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 80px;
+        height: 40vh;
+        margin-top: 50px;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        z-index: 9;
+        transform: translateX(100%);
+        transition: all 1s;
+        opacity: 0;
+    }
+
+    nav ul.slide {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    /* home section */
+    .home img {
+        width: 250px;
+    }
+
+    .home h1 {
+        font-size: 25px;
+    }
+
+    .home p {
+        font-size: 17px;
+    }
+
+    /* profile */
+    .grid {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .aboutme h2 {
+        font-size: 32px;
+        margin-top: 30px;
+        margin-bottom: -30px;
+    }
+
+    .profiletext {
+        margin: 0;
+        font-size: 15px;
+        line-height: 2;
+    }
+
+    .profilecici img {
+        max-width: 60%;
+        margin-left: 20%;
+        margin-top: 20px;
+    }
+
+    /* skills section */
+    .skills .container .row {
+        flex-direction: column;
+    }
+
+    .container .judul-skills h2 {
+        font-size: 32px;
+    }
+
+    .skills .container .row {
+        margin-top: 30px;
+    }
+
+    .skills .container .row .col:nth-child(2) {
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    /* projects section */
+    .projects .container {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+      }
+
+    .judulprojects {
+        font-size: 32px;
+        margin-top: 10px;
+    }
+
+    .projects .card {
+        width: 100%;
+
+        margin-right: 80px;
+    }
+
+    .card {
+        margin-bottom: 10px;
+    }
+
+    .projects img {
+        max-width: 100%;
+        height: auto;
+        width: 350px;
+    }
+
+    .projects .card .sumber {
+        font-size: 8px;
+    }
+
+    .projects .card .buttonprojects{
+        margin-right: 10px;
+
+        margin-right: -10px;
+        margin-top: 50px;
+    }
+
+    /* contact section */
+    .contact h2 {
+        font-size: 32px;
+    }
+    
+    /* .form label {
+        width: 100%;
+    } */
+    
+    /* .form input,
+    .form textarea {
+        margin-bottom: 1rem;
+    } */
+    
+    .buttoncontact {
+        max-width: 100%;
+        margin-left: 115px;
+    }
+      
+    /* footer section */
+    .footer .container {
+        flex-direction: column;
+    }
+    
+    .logososialmedia {
+        margin-top: 5px;
+        margin-right: 0;
+        margin-left: 0;
+        padding: 10px;
+        display:inline-block;
+        text-align: center;
+    }
+    
+    .logososialmedia img {
+        width: 30px;
+        height: 30px;
+    }
 }
