@@ -114,6 +114,12 @@ nav ul li a:hover {
     background-image: url(../img/back1.jpg);
 }
 
+.home .container {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInAndSlide 0.8s ease-in-out forwards;
+}
+
 .home img {
     width: 290px;
 }
@@ -124,12 +130,6 @@ nav ul li a:hover {
 
 .home p {
     font-size: 20px;
-}
-
-.home .container {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInAndSlide 0.8s ease-in-out forwards;
 }
 
 /* animasi Home */
@@ -153,13 +153,13 @@ nav ul li a:hover {
     grid-template-columns: 1fr;
 }
 
-.grid {
+.profile .grid {
     display: grid;
     grid-template-columns: 2fr 1fr;
     grid-template-rows: auto auto;
   }
 
-.aboutme {
+.about-me {
     grid-column: 1 / 2;
     grid-row: 1;
     text-align: center;
@@ -169,19 +169,19 @@ nav ul li a:hover {
     margin-bottom: 50px;
 }
 
-.profiletext {
+.profile-text {
     grid-column: 1;
     grid-row: 2;
     margin-left: 60px;
     text-align: justify;
 }
 
-.profilecici {
+.profile-cici {
     grid-column: 2;
     grid-row: 2;
 }
 
-.profilecici img {
+.profile-cici img {
     max-width: 60%;
     height: auto; 
     margin-left: 110px;
@@ -329,7 +329,7 @@ nav ul li a:hover {
     padding: 80px 0;
 }
 
-.judulprojects {
+.judul-projects {
     text-align: center;
     font-size: 40px;
     font-weight: 700;
@@ -348,25 +348,25 @@ nav ul li a:hover {
         padding-right: 40px;
 }
 
-.card {
+.projects .card {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     transition: transform 0.2s;
     text-align: center;
     flex-grow: 1;
 }
 
-.card:hover {
+.projects .card:hover {
     transform: translateY(-5px);
 }
 
-.projects .card .sumber {
+.projects .sumber {
     font-size: 10px;
     margin-top: -20px;
     text-align: start;
     margin-left: 10px;
 }
 
-.isicard {
+.isi-card {
     height: 290px;
     padding: 20px;
     position: relative;
@@ -377,13 +377,13 @@ nav ul li a:hover {
     width: 405px;
 }
 
-.projects .isicard h4 {
+.projects .isi-card h4 {
     font-size: 25px;
     font-weight: 500;
     margin: 5px;
 }
 
-.projects .isicard p {
+.projects .isi-card p {
     text-align: justify;
     margin-top: 20px;
     font-size: 18px;
@@ -391,7 +391,7 @@ nav ul li a:hover {
     color: #808080;
 }
 
-.projects .card .buttonprojects{
+.projects .buttonprojects{
     background-color: #007BFF;
     border-color: #007BFF;
     font-size: 16px;
@@ -408,7 +408,7 @@ nav ul li a:hover {
 
 }
 
-.projects .card .buttonprojects:hover {
+.projects .buttonprojects:hover {
     background-color: #0056b3;
 } 
 
@@ -430,7 +430,7 @@ nav ul li a:hover {
     color: #000000;
 }
 
-.tempatkontak {
+.tempat-kontak {
     border-radius: 5px;
     padding: 20px;
     text-align: left;
@@ -463,7 +463,7 @@ nav ul li a:hover {
     height: 100px;
 }
 
-.buttoncontact {
+.button-contact {
     justify-content: center;
     align-items: center;
     margin-left: 210px;
@@ -492,30 +492,23 @@ nav ul li a:hover {
     gap: 10px;
 }
 
-.sebelahkiri {
+.sebelah-kiri {
     flex: 1;
 }
 
-.sebelahkanan {
+.sebelah-kanan {
     display: flex;
     margin-left: 20px;
     flex-direction: column;
 }
 
-.socialmedia {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-}
-
-.logososialmedia {
+.logo-sosial-media {
     display: inline-block;
     margin-right: 200px;
     margin-left: -150px;
 }
 
-.logososialmedia img {
+.logo-sosial-media img {
     width: 20px;
     height: 20px;
 }
@@ -539,33 +532,33 @@ nav ul li a:hover {
         padding: 20px;
     }
 
-    .grid {
+    .profile .grid {
         display: flex;
         flex-direction: column;
     }
 
-    .aboutme {
+    .about-me {
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        margin-top: 30px;
     }
 
-    .aboutme h2 {
-        margin-top: 30px;
+    .about-me h2 {
         margin-bottom: -30px;
     }
 
-    .profiletext {
+    .profile-text {
         margin-right: 20px;
         margin-left: 20px;
     }
 
-    .profilecici img {
+    .profile-cici img {
         margin-top: 20px;
         margin-left: 25%;
 
         max-width: 50%;
     }
 
-    .profiletext {
+    .profile-text {
         font-size: 16px;
     }
 
@@ -590,7 +583,7 @@ nav ul li a:hover {
         align-items: center;
     }
 
-    .judulprojects {
+    .judul-projects {
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
 
@@ -598,9 +591,6 @@ nav ul li a:hover {
         width: 90%;
         height: auto;
         margin-right: 20px;
-    }
-
-    .card {
         margin-bottom: 20px;
     }
 
@@ -608,7 +598,7 @@ nav ul li a:hover {
         width: 540px;
     }
 
-    .projects .card .buttonprojects{
+    .projects .buttonprojects{
         margin-right: 40px;
     }
 
@@ -628,17 +618,13 @@ nav ul li a:hover {
         padding: 10px 0;
     }
     
-    .socialmedia {
-        justify-content: center;
-    }
-    
-    .logososialmedia {
+    .logo-sosial-media {
         margin-right: 0;
         margin-left: 0;
         padding: 10px;
     }
     
-    .logososialmedia img {
+    .logo-sosial-media img {
         width: 30px;
         height: 30px;
     }
@@ -696,18 +682,22 @@ nav ul li a:hover {
     }
 
     /* profile */
-    .grid {
+    .profile .grid {
         display: flex;
         flex-direction: column;
     }
 
-    .aboutme h2 {
+    .about-me {
         font-size: 35px;
         margin-top: 30px;
+
+    }
+
+    .about-me h2 {
         margin-bottom: -30px;
     }
 
-    .profilecici img {
+    .profile-cici img {
         margin-top: 20px;
     }
 
@@ -736,7 +726,7 @@ nav ul li a:hover {
         align-items: center;
       }
 
-    .judulprojects {
+    .judul-projects {
         margin-top: 10px;
         font-size: 35px;
     }
@@ -744,9 +734,6 @@ nav ul li a:hover {
     .projects .card {
         width: 95%;
         margin-right: 60px;
-    }
-
-    .card {
         margin-bottom: 10px;
     }
 
@@ -754,17 +741,17 @@ nav ul li a:hover {
         width: 400px;
     }
 
-    .projects .isicard h4 {
+    .projects .isi-card h4 {
         font-size: 22px;
         margin-top: -20px;
     }
 
-    .projects .isicard p {
+    .projects .isi-card p {
         font-size: 16px;
         line-height: 1.9;
     }
 
-    .projects .card .buttonprojects{
+    .projects .buttonprojects{
         margin-right: 10px;
     }
 
@@ -774,7 +761,7 @@ nav ul li a:hover {
         color: black;
         }
 
-    .tempatkontak {
+    .tempat-kontak {
         width: auto;
       }
     
@@ -787,7 +774,7 @@ nav ul li a:hover {
         margin-bottom: 1rem;
       }
     
-      .buttoncontact {
+      .button-contact {
         margin-left: 160px;
       }
 
@@ -796,7 +783,7 @@ nav ul li a:hover {
         flex-direction: column;
       }
     
-      .logososialmedia {
+      .logo-sosial-media {
         margin-top: 5px;
         margin-right: 0;
         margin-left: 0;
@@ -805,7 +792,7 @@ nav ul li a:hover {
         text-align: center;
       }
     
-      .logososialmedia img {
+      .logo-sosial-media img {
         width: 30px;
         height: 30px;
       }
@@ -864,24 +851,26 @@ nav ul li a:hover {
     }
 
     /* profile */
-    .grid {
+    .profile .grid {
         display: flex;
         flex-direction: column;
     }
 
-    .aboutme h2 {
+    .about-me {
         font-size: 32px;
         margin-top: 30px;
+    }
+    .about-me h2{
         margin-bottom: -30px;
     }
 
-    .profiletext {
+    .profile-text {
         margin: 0;
         font-size: 15px;
         line-height: 2;
     }
 
-    .profilecici img {
+    .profile-cici img {
         max-width: 60%;
         margin-left: 20%;
         margin-top: 20px;
@@ -912,18 +901,14 @@ nav ul li a:hover {
         align-items: center;
       }
 
-    .judulprojects {
+    .judul-projects {
         font-size: 32px;
         margin-top: 10px;
     }
 
     .projects .card {
         width: 100%;
-
         margin-right: 80px;
-    }
-
-    .card {
         margin-bottom: 10px;
     }
 
@@ -933,11 +918,11 @@ nav ul li a:hover {
         width: 350px;
     }
 
-    .projects .card .sumber {
+    .projects .sumber {
         font-size: 8px;
     }
 
-    .projects .card .buttonprojects{
+    .projects .buttonprojects{
         margin-right: 10px;
 
         margin-right: -10px;
@@ -958,7 +943,7 @@ nav ul li a:hover {
         margin-bottom: 1rem;
     } */
     
-    .buttoncontact {
+    .button-contact {
         max-width: 100%;
         margin-left: 115px;
     }
@@ -968,7 +953,7 @@ nav ul li a:hover {
         flex-direction: column;
     }
     
-    .logososialmedia {
+    .logo-sosial-media {
         margin-top: 5px;
         margin-right: 0;
         margin-left: 0;
@@ -977,7 +962,7 @@ nav ul li a:hover {
         text-align: center;
     }
     
-    .logososialmedia img {
+    .logo-sosial-media img {
         width: 30px;
         height: 30px;
     }
