@@ -11,10 +11,21 @@ body {
 }
 
 /* navbar section */
+
+header {
+    background-color: white;
+	padding: 10px 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 9999;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15), 0 6px 20px 0 rgba(0, 0, 0, 0.025);
+}
+
 nav {
     display: flex;
     color: #3498db;
-    padding: 10px 0;
     justify-content: space-between;
     align-items: center;
 }
@@ -30,6 +41,7 @@ nav .logo {
 nav ul {
     list-style: none;
     display: flex;
+	flex-direction: row;
 }
 
 nav ul li {
@@ -326,6 +338,7 @@ nav ul li a:hover {
 
 /* section projects */
 .projects {
+    min-height: 98vh;
     padding: 80px 0;
 }
 
@@ -334,7 +347,7 @@ nav ul li a:hover {
     font-size: 40px;
     font-weight: 700;
     margin-bottom: 60px;
-    margin-top: -30px;
+    margin-top: -80px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
@@ -411,6 +424,54 @@ nav ul li a:hover {
 .projects .buttonprojects:hover {
     background-color: #0056b3;
 } 
+
+/* experience section */
+.experience {
+    min-height: 98vh;
+    padding: 80px 0;
+}
+
+.judul-experience {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 60px;
+    margin-top: -80px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.experience .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding-left: 150px;
+        padding-right: 150px;
+}
+
+.experience .card {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.experience .card:hover {
+    transform: translateY(-5px);
+}
+
+.experience .isi-card {
+    height: 40px;
+}
+
+.experience img {
+    width: 500px;
+}
+
+.experience .isi-card h4 {
+    font-size: 25px;
+}
 
 
 /* Contact Section */
@@ -515,12 +576,6 @@ nav ul li a:hover {
 
 /* ukuran tablet */
 @media screen and (max-width: 768px) {
-
-    /* Navbar Section */
-    nav ul {
-        width: 50%;
-    }
-
     /* Home Section */
     .home {
         height: 70vh;
@@ -537,24 +592,18 @@ nav ul li a:hover {
         flex-direction: column;
     }
 
-    .about-me {
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        margin-top: 30px;
-    }
-
     .about-me h2 {
+        margin-top: 30px;
         margin-bottom: -30px;
     }
 
     .profile-text {
-        margin-right: 20px;
-        margin-left: 20px;
+        margin: 0 20px;
     }
 
     .profile-cici img {
         margin-top: 20px;
         margin-left: 25%;
-
         max-width: 50%;
     }
 
@@ -567,50 +616,48 @@ nav ul li a:hover {
         padding: 30px 8%;
     }
 
-    .container .judul-skills {
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    }
-
     /* Projects Section */
     .projects {
-        height: auto;
-        padding: 20px;
+        padding: 45px;
     }
 
     .projects .container {
         width: 90%;
         flex-direction: column;
-        align-items: center;
-    }
-
-    .judul-projects {
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     }
 
     .projects .card {
         width: 90%;
-        height: auto;
-        margin-right: 20px;
+        margin-right: 10px;
         margin-bottom: 20px;
     }
 
     .projects img {
-        width: 540px;
+        width: 500px;
     }
 
     .projects .buttonprojects{
         margin-right: 40px;
     }
 
-    /* Contact Section */
-    .contact {
-        height: auto;
-        padding: 20px;
+    /* experience section */
+    .experience {
+        overflow-x: hidden;
+        width: 100%;
     }
-    
-    .contact h2 {
-        font-size: 35px;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+    .experience .container {
+        width: 90%;
+        flex-direction: column;
+    }
+
+    .experience .card {
+        width: 80%;
+        margin-right: 35%;
+    }
+
+    .experience img {
+        width: 510px;
     }
 
     /* Footer Section */
@@ -689,12 +736,6 @@ nav ul li a:hover {
 
     .about-me {
         font-size: 35px;
-        margin-top: 30px;
-
-    }
-
-    .about-me h2 {
-        margin-bottom: -30px;
     }
 
     .profile-cici img {
@@ -723,8 +764,7 @@ nav ul li a:hover {
     .projects .container {
         width: 95%;
         flex-direction: column;
-        align-items: center;
-      }
+    }
 
     .judul-projects {
         margin-top: 10px;
@@ -734,7 +774,6 @@ nav ul li a:hover {
     .projects .card {
         width: 95%;
         margin-right: 60px;
-        margin-bottom: 10px;
     }
 
     .projects img {
@@ -755,48 +794,47 @@ nav ul li a:hover {
         margin-right: 10px;
     }
 
+    /* experience section */
+    .experience .container {
+        width: 95%;
+        flex-direction: column;
+      }
+
+    .judul-experience {
+        margin-top: 5px;
+        font-size: 35px;
+    }
+
+    .experience .card {
+        width: 95%;
+        margin-right: 60%;
+    }
+
+    .experience img {
+        width: 430px;
+    }
+
+    .experience .isi-card h4 {
+        font-size: 22px;
+    }
+
     /* contact section */
     .contact h2 {
-        width: 100%;
-        color: black;
-        }
+        margin-top: -20px;
+    }
 
     .tempat-kontak {
         width: auto;
-      }
+    }
     
-      .form label {
-        width: 100%;
-      }
-    
-      .form input,
-      .form textarea {
-        margin-bottom: 1rem;
-      }
-    
-      .button-contact {
+    .button-contact {
         margin-left: 160px;
-      }
+    }
 
       /* footer section */
-      .footer .container {
+    .footer .container {
         flex-direction: column;
-      }
-    
-      .logo-sosial-media {
-        margin-top: 5px;
-        margin-right: 0;
-        margin-left: 0;
-        padding: 10px;
-        display:inline-block;
-        text-align: center;
-      }
-    
-      .logo-sosial-media img {
-        width: 30px;
-        height: 30px;
-      }
-    
+    }
 }
 
 /* ukuran mobile */
@@ -807,104 +845,22 @@ nav ul li a:hover {
         width: 100%;
     }
 
-    /* navbar section */
-    nav ul {
-        position: static;
-        margin-right: 0;
-    }
-    .menu-toggle {
-        display: flex;
-        z-index: 10;
-    }
-    nav ul {
-        position: absolute;
-        right: 0;
-        top: 0;
-        width: 80px;
-        height: 40vh;
-        margin-top: 50px;
-        justify-content: space-evenly;
-        flex-direction: column;
-        align-items: center;
-        z-index: 9;
-        transform: translateX(100%);
-        transition: all 1s;
-        opacity: 0;
-    }
-
-    nav ul.slide {
-        opacity: 1;
-        transform: translateX(0);
-    }
-
     /* home section */
-    .home img {
-        width: 250px;
-    }
-
     .home h1 {
         font-size: 25px;
     }
 
-    .home p {
-        font-size: 17px;
-    }
-
     /* profile */
-    .profile .grid {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .about-me {
-        font-size: 32px;
-        margin-top: 30px;
-    }
-    .about-me h2{
-        margin-bottom: -30px;
-    }
-
     .profile-text {
         margin: 0;
         font-size: 15px;
         line-height: 2;
     }
 
-    .profile-cici img {
-        max-width: 60%;
-        margin-left: 20%;
-        margin-top: 20px;
-    }
-
-    /* skills section */
-    .skills .container .row {
-        flex-direction: column;
-    }
-
-    .container .judul-skills h2 {
-        font-size: 32px;
-    }
-
-    .skills .container .row {
-        margin-top: 30px;
-    }
-
-    .skills .container .row .col:nth-child(2) {
-        margin-top: 20px;
-        margin-bottom: 10px;
-    }
-
     /* projects section */
     .projects .container {
         width: 100%;
-        flex-direction: column;
-        align-items: center;
       }
-
-    .judul-projects {
-        font-size: 32px;
-        margin-top: 10px;
-    }
 
     .projects .card {
         width: 100%;
@@ -914,8 +870,6 @@ nav ul li a:hover {
 
     .projects img {
         max-width: 100%;
-        height: auto;
-        width: 350px;
     }
 
     .projects .sumber {
@@ -923,47 +877,30 @@ nav ul li a:hover {
     }
 
     .projects .buttonprojects{
-        margin-right: 10px;
-
         margin-right: -10px;
         margin-top: 50px;
     }
 
-    /* contact section */
-    .contact h2 {
-        font-size: 32px;
-    }
-    
-    /* .form label {
+    /* experience section */
+    .experience .container {
         width: 100%;
-    } */
-    
-    /* .form input,
-    .form textarea {
-        margin-bottom: 1rem;
-    } */
-    
-    .button-contact {
+      }
+
+    .experience .card {
+        margin-right: 78%;
+    }
+
+    .experience img {
         max-width: 100%;
+    }
+
+    .experience .isi-card h4 {
+        font-size: 18px;
+    }
+
+
+    /* contact section */    
+    .button-contact {
         margin-left: 115px;
     }
-      
-    /* footer section */
-    .footer .container {
-        flex-direction: column;
-    }
-    
-    .logo-sosial-media {
-        margin-top: 5px;
-        margin-right: 0;
-        margin-left: 0;
-        padding: 10px;
-        display:inline-block;
-        text-align: center;
-    }
-    
-    .logo-sosial-media img {
-        width: 30px;
-        height: 30px;
-    }
-}
+} 
